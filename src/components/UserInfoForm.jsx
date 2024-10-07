@@ -26,21 +26,7 @@ function UserInfoForm({user}) {
 
     useEffect(() => {
         if (user) {
-            const updateForm = {
-                id: user.id,
-                firstName: user.firstName,
-                lastName: user.lastName,
-                gender: user.gender,
-                email: user.email,
-                jobTitle: user.jobTitle,
-                street: user.street,
-                city: user.city,
-                latitude: user.latitude,
-                longitude: user.longitude,
-                favouriteColour: user.favouriteColour,
-                profileImage: user.profileImage
-            }
-            setFormData(updateForm)
+            setFormData(user)
         }
     }, [user])
 
